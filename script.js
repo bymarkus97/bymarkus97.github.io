@@ -89,38 +89,37 @@ document.addEventListener('DOMContentLoaded', () => {
   const filterButtons = document.querySelectorAll('.filter-btn');
   const fruitCards = document.querySelectorAll('.fruit-card');
 
-  const bindAddToCartButtons = () => {
-    const cartCount = document.querySelector('.cart-count');
-    const summaryTotal = document.querySelector('.summary-total');
-    let totalItems = 0;
-    let totalPrice = 0;
+  const cartCount = document.querySelector('.cart-count');
+  const summaryTotal = document.querySelector('.summary-total');
+  let cart = [];
 
-    const updateSummary = () => {
-      if (cartCount) cartCount.textContent = totalItems;
-      if (summaryTotal) summaryTotal.textContent = `€${totalPrice}`;
-    };
-
-    document.querySelectorAll('.add-to-cart').forEach((button) => {
-      button.addEventListener('click', () => {
-        const price = Number(button.dataset.price || 0);
-        totalItems += 1;
-        totalPrice += price;
-        updateSummary();
-
-        button.textContent = 'Añadido';
-        button.disabled = true;
-        button.style.opacity = '0.8';
-
-        setTimeout(() => {
-          button.textContent = 'Comprar';
-          button.disabled = false;
-          button.style.opacity = '1';
-        }, 800);
-      });
-    });
+  const updateCart = () => {
+    if (cartCount) cartCount.textContent = cart.length;
+    if (summaryTotal) {
+      const total = cart.reduce((sum, item) => sum + item.price, 0);
+      summaryTotal.textContent = `€${total}`;
+    }
   };
 
-  bindAddToCartButtons();
+  document.addEventListener('click', (event) => {
+    const button = event.target.closest('.add-to-cart');
+    if (!button) return;
+
+    const price = Number(button.dataset.price || 0);
+    const name = button.dataset.name || 'Fruit';
+    cart.push({ name, price });
+    updateCart();
+
+    button.textContent = '✓ Añadido';
+    button.disabled = true;
+    button.style.opacity = '0.8';
+
+    setTimeout(() => {
+      button.textContent = 'Comprar';
+      button.disabled = false;
+      button.style.opacity = '1';
+    }, 800);
+  });
 
   filterButtons.forEach((button) => {
     button.addEventListener('click', () => {
@@ -134,17 +133,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-        }
-      });
-    },
-    { threshold: 0.15 }
-  );
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.15 });
 
   document.querySelectorAll('.reveal').forEach((element) => {
     element.style.opacity = '0';
