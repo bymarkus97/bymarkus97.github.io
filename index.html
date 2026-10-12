@@ -1,3 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EmpireFruit | Premium Fruits Market</title>
+    <meta
+      name="description"
+      content="EmpireFruit es una tienda premium inspirada en Blox Fruits con frutas legendarias, precios competitivos y un estilo épico."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-glow glow-1"></div>
+    <div class="bg-glow glow-2"></div>
+    <div class="bg-glow glow-3"></div>
 
-      <div class="fruit-grid"></div>
+    <header class="topbar">
+      <div class="container nav">
+        <div class="brand" aria-label="EmpireFruit logo">
+          <span class="brand-mark">🍇</span>
+          <span class="brand-name">EmpireFruit</span>
+        </div>
 
+        <nav class="nav-links" aria-label="Navegación principal">
+          <a href="#inicio">Inicio</a>
+          <a href="#frutas">Frutas</a>
+          <a href="#raras">Raras</a>
+          <a href="#poder">Poder</a>
+          <a href="#comprar">Comprar</a>
+        </nav>
+
+        <button class="nav-button" type="button">Jugar ahora</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="inicio">
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <span class="eyebrow">FRUIT + POWER + LEGEND</span>
+            <h1>Compra la fruta más fuerte del mar.</h1>
+            <p>
+              Descubre frutas épicas, míticas y legendarias con estadísticas premium,
+              estilo anime y una experiencia de aventura inspirada en el mundo de Blox Fruits.
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#comprar">Comprar ahora</a>
+              <a class="btn btn-secondary" href="#frutas">Ver frutas</a>
+            </div>
+
+            <div class="hero-stats">
+              <div>
+                <strong>1.2M+</strong>
+                <span>Jugadores</span>
+              </div>
+              <div>
+                <strong>24/7</strong>
+                <span>Eventos</span>
+              </div>
+              <div>
+                <strong>40+</strong>
+                <span>Frutas</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal" aria-label="Frutas premium muestra del juego">
+            <div class="orb orb-one">🍇</div>
+            <div class="orb orb-two">🍊</div>
+            <div class="orb orb-three">🍓</div>
+            <div class="orb orb-four">🥝</div>
+
+            <div class="card card-main">
+              <div class="card-top">
+                <span>Elite Fruit</span>
+                <span class="live">LIVE</span>
+              </div>
+              <div class="fruit-badge">🐉</div>
+              <h3>Dragón</h3>
+              <div class="progress-row">
+                <span>Power</span>
+                <strong>100%</strong>
+              </div>
+              <div class="bar"><span></span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="feature-strip" id="poder">
+        <div class="container feature-grid">
+          <article class="mini-feature reveal">
+            <div class="icon">⚔️</div>
+            <div>
+              <h4>Poder de combate</h4>
+              <p>Sube de nivel con frutos épicos y destruye cualquier rival del mapa.</p>
+            </div>
+          </article>
+          <article class="mini-feature reveal">
+            <div class="icon">🌍</div>
+            <div>
+              <h4>Mapas inmensos</h4>
+              <p>Explora islas, boss raids y zonas ocultas repletas de tesoros.</p>
+            </div>
+          </article>
+          <article class="mini-feature reveal">
+            <div class="icon">💎</div>
+            <div>
+              <h4>Precios premium</h4>
+              <p>Obtén acceso a frutas legendarias con paquetes y descuentos exclusivos.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="frutas">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="eyebrow">FRUTAS LEGENDARIAS</span>
+            <h2>Descubre el poder de cada fruta</h2>
+          </div>
+
+          <div class="shop-toolbar reveal">
+            <div class="filter-group" aria-label="Filtrar frutas por rareza">
+              <button class="filter-btn active" type="button" data-filter="all">Todas</button>
+              <button class="filter-btn" type="button" data-filter="rare">Raras</button>
+              <button class="filter-btn" type="button" data-filter="epic">Épicas</button>
+              <button class="filter-btn" type="button" data-filter="legendary">Legendarias</button>
+              <button class="filter-btn" type="button" data-filter="mythic">Míticas</button>
+            </div>
+            <div class="cart-pill">
+              <span>Carrito</span>
+              <strong class="cart-count">0</strong>
+            </div>
+          </div>
+
+          <div class="fruit-grid"></div>
+        </div>
+      </section>
+
+      <section class="section dark-panel" id="raras">
+        <div class="container battle-grid">
+          <div class="battle-copy reveal">
+            <span class="eyebrow">EXPERIENCIA PREMIUM</span>
+            <h2>Un mundo pensado para dominar cada isla.</h2>
+            <p>
+              Participa en combates, mutaciones, misiones cooperativas y un sistema de progreso
+              que te empuja a seguir avanzando cada día. Todo con la esencia del estilo más épico del mar.
+            </p>
+            <ul>
+              <li>🥇 Modo PvP competitivo</li>
+              <li>🤝 Misiones cooperativas</li>
+              <li>🧩 Eventos temporales exclusivos</li>
+              <li>🛡️ Mejoras de personaje y armadura</li>
+            </ul>
+          </div>
+
+          <div class="battle-panel reveal">
+            <div class="panel-header">
+              <span>Season 12</span>
+              <span class="chip">Premium</span>
+            </div>
+            <div class="panel-body">
+              <div class="panel-stat">
+                <label>Progreso</label>
+                <strong>88%</strong>
+              </div>
+              <div class="meter"><span></span></div>
+              <div class="reward-box">
+                <span>Recompensa</span>
+                <strong>Fruit Crystal x12</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section checkout-section" id="comprar">
+        <div class="container checkout-box reveal">
+          <div>
+            <span class="eyebrow light">LISTO PARA EMPEZAR</span>
+            <h2>Únete al imperio más frutal</h2>
+          </div>
+          <div class="summary-panel" aria-live="polite">
+            <div>
+              <span>Tu compra</span>
+              <strong class="summary-total">€0</strong>
+            </div>
+            <div class="checkout-actions">
+              <button class="btn btn-dark" type="button">PayPal</button>
+              <button class="btn btn-light" type="button">Pagar</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="brand footer-brand">
+            <span class="brand-mark">🍇</span>
+            <span class="brand-name">EmpireFruit</span>
+          </div>
+          <p>El futuro de la colección frutal está aquí.</p>
+        </div>
+
+        <div>
+          <h4>Explora</h4>
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#frutas">Frutas</a></li>
+            <li><a href="#comprar">Comprar</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Comunidad</h4>
+          <ul>
+            <li><a href="#">Discord</a></li>
+            <li><a href="#">YouTube</a></li>
+            <li><a href="#">Twitter</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <span>© 2026 EmpireFruit</span>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
