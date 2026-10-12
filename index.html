@@ -3,259 +3,236 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EmpireFruit | Premium Fruit Adventure</title>
+    <title>Blox Fruits | Frutas legendarias</title>
     <meta
       name="description"
-      content="EmpireFruit es una experiencia premium de colección, combate y aventura con frutas legendarias."
+      content="Colección premium de frutas estilo Blox Fruits con precios, raridades y fotos reales."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Orbitron:wght@500;700;800;900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="bg-glow glow-1"></div>
-    <div class="bg-glow glow-2"></div>
-    <div class="bg-glow glow-3"></div>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="container nav">
+          <div class="brand" aria-label="Blox Fruits logo">
+            <span class="brand-mark">🍉</span>
+            <span class="brand-name">BLOX FRUITS</span>
+          </div>
 
-    <header class="topbar">
-      <div class="container nav">
-        <div class="brand">
-          <span class="brand-mark">🍇</span>
-          <span class="brand-name">EmpireFruit</span>
+          <nav class="nav-links" aria-label="Navegación principal">
+            <a href="#inicio">Inicio</a>
+            <a href="#frutas">Frutas</a>
+            <a href="#raras">Raras</a>
+            <a href="#tienda">Tienda</a>
+          </nav>
+
+          <button class="nav-button">Jugar ahora</button>
         </div>
+      </header>
 
-        <nav class="nav-links">
-          <a href="#inicio">Inicio</a>
-          <a href="#features">Características</a>
-          <a href="#frutas">Frutas</a>
-          <a href="#modo">Modo</a>
-          <a href="#descargar">Descargar</a>
-        </nav>
+      <main>
+        <section class="hero" id="inicio">
+          <div class="container hero-grid">
+            <div class="hero-copy">
+              <span class="eyebrow">FRUIT POWER</span>
+              <h1>Domina el mundo con las mejores frutas.</h1>
+              <p>
+                Explora frutas legendarias, elige tu estilo de combate y conviértete
+                en el mejor pirata del mar. Colecciona poder, sube de nivel y conquista
+                cada isla con fuerza y estrategia.
+              </p>
 
-        <button class="nav-button">Jugar ahora</button>
-      </div>
-    </header>
+              <div class="hero-actions">
+                <a class="btn btn-primary" href="#frutas">Ver frutas</a>
+                <a class="btn btn-secondary" href="#tienda">Tienda</a>
+              </div>
 
-    <main>
-      <section class="hero" id="inicio">
-        <div class="container hero-grid">
-          <div class="hero-copy">
-            <span class="eyebrow">FRUIT + POWER + LEGEND</span>
-            <h1>Construye tu imperio frutal.</h1>
-            <p>
-              EmpireFruit combina la emoción de la recolección, la estrategia del
-              crecimiento y la intensidad del combate. Adquiere frutas míticas,
-              crea tu equipo y domina el mapa.
-            </p>
-
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="#descargar">Descargar</a>
-              <a class="btn btn-secondary" href="#features">Ver más</a>
+              <div class="hero-stats">
+                <div>
+                  <strong>1.2M+</strong>
+                  <span>Jugadores</span>
+                </div>
+                <div>
+                  <strong>24/7</strong>
+                  <span>Eventos</span>
+                </div>
+                <div>
+                  <strong>150+</strong>
+                  <span>Frutas</span>
+                </div>
+              </div>
             </div>
 
-            <div class="hero-stats">
+            <div class="hero-visual" aria-label="Imagen destacada de fruta legendaria">
+              <div class="orb orb-one">🍍</div>
+              <div class="orb orb-two">🍇</div>
+              <div class="orb orb-three">🍊</div>
+              <div class="orb orb-four">🍓</div>
+
+              <div class="hero-card">
+                <div class="card-top">
+                  <span>Legendary Drop</span>
+                  <span class="live">LIVE</span>
+                </div>
+                <img
+                  src="https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=900&q=80"
+                  alt="Fruta legendaria"
+                />
+                <h3>Mera Mera no Mi</h3>
+                <div class="progress-row">
+                  <span>Poder</span>
+                  <strong>96%</strong>
+                </div>
+                <div class="bar"><span></span></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="feature-strip" id="raras">
+          <div class="container feature-grid">
+            <article class="mini-feature">
+              <div class="icon">⚔️</div>
               <div>
-                <strong>1.2M+</strong>
-                <span>Jugadores</span>
+                <h4>Poder de combate</h4>
+                <p>Mejora tus habilidades con frutas raras y técnicas brutalmente potentes.</p>
               </div>
+            </article>
+            <article class="mini-feature">
+              <div class="icon">🌊</div>
               <div>
-                <strong>24/7</strong>
-                <span>Eventos</span>
+                <h4>Islas legendarias</h4>
+                <p>Explora nuevos territorios, tesoros y eventos exclusivos de temporada.</p>
               </div>
+            </article>
+            <article class="mini-feature">
+              <div class="icon">💰</div>
               <div>
-                <strong>150+</strong>
-                <span>Niveles</span>
+                <h4>Precios premium</h4>
+                <p>Compra frutas con enormes beneficios y alcanza el máximo poder.</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section fruits-section" id="frutas">
+          <div class="container">
+            <div class="section-heading">
+              <span class="eyebrow">FRUTAS LEGENDARIAS</span>
+              <h2>Descubre tus nuevas habilidades</h2>
+            </div>
+
+            <div class="shop-tools">
+              <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Buscar fruta..." />
+              </div>
+              <div class="filter-bar" aria-label="Filtros de frutas">
+                <button class="filter-btn active" data-filter="all">Todas</button>
+                <button class="filter-btn" data-filter="logia">Logia</button>
+                <button class="filter-btn" data-filter="paramecia">Paramecia</button>
+                <button class="filter-btn" data-filter="zoan">Zoan</button>
+                <button class="filter-btn" data-filter="mythical">Mítica</button>
+              </div>
+            </div>
+
+            <div id="fruitGrid" class="fruit-grid" aria-live="polite"></div>
+          </div>
+        </section>
+
+        <section class="section info-section" id="tienda">
+          <div class="container info-grid">
+            <div class="info-copy">
+              <span class="eyebrow">MODO DE JUEGO</span>
+              <h2>Un mundo pensado para dominar cada pelea.</h2>
+              <p>
+                Participa en combates intensos, mejora tus habilidades y desbloquea
+                nuevas habilidades especiales. Cada fruta te da un estilo único, una
+                estrategia diferente y un enorme potencial para llegar a la cima.
+              </p>
+              <ul>
+                <li>🥇 PvP competitivo</li>
+                <li>🤝 Misiones cooperativas</li>
+                <li>🧩 Eventos temporales</li>
+                <li>🛡️ Mejora de personaje</li>
+              </ul>
+            </div>
+
+            <div class="info-panel">
+              <div class="panel-header">
+                <span>Season 12</span>
+                <span class="chip">Premium</span>
+              </div>
+              <div class="panel-body">
+                <div class="panel-stat">
+                  <label>Progreso</label>
+                  <strong>88%</strong>
+                </div>
+                <div class="meter"><span></span></div>
+                <div class="reward-box">
+                  <span>Recompensa</span>
+                  <strong>Fruit Crystal x12</strong>
+                </div>
               </div>
             </div>
           </div>
+        </section>
+      </main>
 
-          <div class="hero-visual" aria-label="Muestra de frutas y elementos del juego">
-            <div class="orb orb-one">🍇</div>
-            <div class="orb orb-two">🍊</div>
-            <div class="orb orb-three">🍓</div>
-            <div class="orb orb-four">🥝</div>
-            <div class="card card-main">
-              <div class="card-top">
-                <span>Elite Fruit</span>
-                <span class="live">LIVE</span>
-              </div>
-              <div class="fruit-badge">🍎</div>
-              <h3>Manzana del Sol</h3>
-              <div class="progress-row">
-                <span>Power</span>
-                <strong>96%</strong>
-              </div>
-              <div class="bar"><span></span></div>
+      <footer class="footer">
+        <div class="container footer-grid">
+          <div>
+            <div class="brand footer-brand">
+              <span class="brand-mark">🍉</span>
+              <span class="brand-name">BLOX FRUITS</span>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="feature-strip" id="features">
-        <div class="container feature-grid">
-          <article class="mini-feature">
-            <div class="icon">⚔️</div>
-            <div>
-              <h4>Poder de combate</h4>
-              <p>Sube de nivel con frutas épicas y gana cada enfrentamiento.</p>
-            </div>
-          </article>
-          <article class="mini-feature">
-            <div class="icon">🌍</div>
-            <div>
-              <h4>Mapas inmensos</h4>
-              <p>Explora, conquista y alcanza nuevas regiones cargadas de tesoros.</p>
-            </div>
-          </article>
-          <article class="mini-feature">
-            <div class="icon">💎</div>
-            <div>
-              <h4>Recompensas premium</h4>
-              <p>Obten recompensas exclusivas con cada logro, misión y temporada.</p>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="section fruits-section" id="frutas">
-        <div class="container">
-          <div class="section-heading">
-            <span class="eyebrow">FRUTAS LEGENDARIAS</span>
-            <h2>Descubre el poder de cada fruta</h2>
+            <p>El futuro del poder frutal está aquí.</p>
           </div>
 
-          <div class="fruit-grid">
-            <article class="fruit-card rare">
-              <span class="rarity">Raro</span>
-              <div class="fruit-icon">🍇</div>
-              <h3>Uva Eclipse</h3>
-              <p>+50 XP · Bonus x1.5</p>
-            </article>
-            <article class="fruit-card uncommon">
-              <span class="rarity">Común</span>
-              <div class="fruit-icon">🍊</div>
-              <h3>Naranja Aurora</h3>
-              <p>+30 XP · Bonus x1.2</p>
-            </article>
-            <article class="fruit-card epic">
-              <span class="rarity">Épica</span>
-              <div class="fruit-icon">🍓</div>
-              <h3>Fresa Vórtice</h3>
-              <p>+100 XP · Bonus x2.0</p>
-            </article>
-            <article class="fruit-card legendary">
-              <span class="rarity">Legendaria</span>
-              <div class="fruit-icon">🥝</div>
-              <h3>Kiwi Dragón</h3>
-              <p>+150 XP · Bonus x3.0</p>
-            </article>
-            <article class="fruit-card mythic">
-              <span class="rarity">Mítica</span>
-              <div class="fruit-icon">🍌</div>
-              <h3>Banano Supremo</h3>
-              <p>+400 XP · Bonus x5.0</p>
-            </article>
-            <article class="fruit-card divine">
-              <span class="rarity">Divina</span>
-              <div class="fruit-icon">🍏</div>
-              <h3>Manzana Solar</h3>
-              <p>+500 XP · Bonus x6.0</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section battle-section" id="modo">
-        <div class="container battle-grid">
-          <div class="battle-copy">
-            <span class="eyebrow">EXPERIENCIA PREMIUM</span>
-            <h2>Un mundo pensado para dominar.</h2>
-            <p>
-              Participa en batallas, compleja economía, misiones cooperativas y un
-              sistema de progreso que te empuja a seguir avanzaando cada día.
-            </p>
+          <div>
+            <h4>Explora</h4>
             <ul>
-              <li>🥇 Modo PvP competitivo</li>
-              <li>🤝 Misiones cooperativas</li>
-              <li>🧩 Eventos temporales exclusivos</li>
-              <li>🛡️ Mejoras de personaje y armadura</li>
+              <li><a href="#inicio">Inicio</a></li>
+              <li><a href="#frutas">Frutas</a></li>
+              <li><a href="#raras">Raras</a></li>
             </ul>
           </div>
 
-          <div class="battle-panel">
-            <div class="panel-header">
-              <span>Season 12</span>
-              <span class="chip">Premium</span>
-            </div>
-            <div class="panel-body">
-              <div class="panel-stat">
-                <label>Progreso</label>
-                <strong>88%</strong>
-              </div>
-              <div class="meter"><span></span></div>
-              <div class="reward-box">
-                <span>Recompensa</span>
-                <strong>Fruit Crystal x12</strong>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section download-section" id="descargar">
-        <div class="container download-box">
           <div>
-            <span class="eyebrow light">LISTO PARA EMPEZAR</span>
-            <h2>Únete al imperio más frutal</h2>
-          </div>
-          <div class="download-actions">
-            <a class="btn btn-dark" href="#">iOS</a>
-            <a class="btn btn-dark" href="#">Android</a>
-            <a class="btn btn-light" href="#">Web</a>
+            <h4>Comunidad</h4>
+            <ul>
+              <li><a href="#">Discord</a></li>
+              <li><a href="#">YouTube</a></li>
+              <li><a href="#">Twitter</a></li>
+            </ul>
           </div>
         </div>
-      </section>
-    </main>
 
-    <footer class="footer">
-      <div class="container footer-grid">
-        <div>
-          <div class="brand footer-brand">
-            <span class="brand-mark">🍇</span>
-            <span class="brand-name">EmpireFruit</span>
-          </div>
-          <p>El futuro de la colección frutal está aquí.</p>
+        <div class="container footer-bottom">
+          <span>© 2026 Blox Fruits Fan Page</span>
         </div>
+      </footer>
+    </div>
 
-        <div>
-          <h4>Explora</h4>
-          <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#features">Características</a></li>
-            <li><a href="#frutas">Frutas</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4>Comunidad</h4>
-          <ul>
-            <li><a href="#">Discord</a></li>
-            <li><a href="#">YouTube</a></li>
-            <li><a href="#">Twitter</a></li>
-          </ul>
+    <div id="fruitModal" class="modal" aria-hidden="true">
+      <div class="modal-content">
+        <button class="modal-close" aria-label="Cerrar modal">×</button>
+        <img id="modalImage" src="" alt="Fruta" />
+        <div class="modal-body">
+          <span id="modalRarity" class="modal-rarity"></span>
+          <h2 id="modalName"></h2>
+          <p id="modalType"></p>
+          <p id="modalPrice"></p>
+          <p id="modalDescription"></p>
         </div>
       </div>
-
-      <div class="container footer-bottom">
-        <span>© 2026 EmpireFruit</span>
-      </div>
-    </footer>
+    </div>
 
     <script src="script.js"></script>
   </body>
 </html>
-
