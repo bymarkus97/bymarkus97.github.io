@@ -18,52 +18,54 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   const fruitCatalog = [
-    { name: 'Fruta Rocket', rarity: 'rare', price: 12, label: 'Rara', emoji: '🚀', meta: '+70 XP · Velocidad x1.8' },
-    { name: 'Fruta Gira', rarity: 'rare', price: 14, label: 'Rara', emoji: '🦒', meta: '+85 XP · Agilidad x2.1' },
-    { name: 'Fruta Blade', rarity: 'rare', price: 16, label: 'Rara', emoji: '🗡️', meta: '+95 XP · Daño x2.4' },
-    { name: 'Fruta Resorte', rarity: 'rare', price: 18, label: 'Rara', emoji: '🪢', meta: '+110 XP · Salto x2.6' },
-    { name: 'Fruta Bomba', rarity: 'epic', price: 20, label: 'Épica', emoji: '💣', meta: '+140 XP · Explosión x3.0' },
-    { name: 'Fruta Humo', rarity: 'epic', price: 22, label: 'Épica', emoji: '💨', meta: '+150 XP · Sigilo x3.2' },
-    { name: 'Fruta Pico', rarity: 'epic', price: 23, label: 'Épica', emoji: '⛏️', meta: '+160 XP · Minería x3.4' },
-    { name: 'Fruta Fuego', rarity: 'epic', price: 25, label: 'Épica', emoji: '🔥', meta: '+175 XP · Furia x3.6' },
-    { name: 'Fruta Hielo', rarity: 'epic', price: 27, label: 'Épica', emoji: '❄️', meta: '+185 XP · Frío x3.8' },
-    { name: 'Fruta Arena', rarity: 'legendary', price: 29, label: 'Legendaria', emoji: '🏜️', meta: '+210 XP · Defensa x4.0' },
-    { name: 'Fruta Oscuridad', rarity: 'legendary', price: 31, label: 'Legendaria', emoji: '🌑', meta: '+220 XP · Sombras x4.2' },
-    { name: 'Fruta Eagle', rarity: 'legendary', price: 33, label: 'Legendaria', emoji: '🦅', meta: '+240 XP · Visión x4.5' },
-    { name: 'Fruta Diamante', rarity: 'legendary', price: 35, label: 'Legendaria', emoji: '💎', meta: '+250 XP · Durabilidad x4.8' },
-    { name: 'Fruta Luz', rarity: 'legendary', price: 36, label: 'Legendaria', emoji: '✨', meta: '+260 XP · Brillo x5.0' },
-    { name: 'Fruta Caucho', rarity: 'mythic', price: 38, label: 'Mítica', emoji: '🛞', meta: '+290 XP · Elasticidad x5.2' },
-    { name: 'Fruta Fantasma', rarity: 'mythic', price: 40, label: 'Mítica', emoji: '👻', meta: '+305 XP · Etérea x5.5' },
-    { name: 'Fruta Magma', rarity: 'mythic', price: 42, label: 'Mítica', emoji: '🌋', meta: '+330 XP · Ardor x5.8' },
-    { name: 'Fruta Temblor', rarity: 'mythic', price: 45, label: 'Mítica', emoji: '🌍', meta: '+350 XP · Terremoto x6.0' },
-    { name: 'Fruta Buddha', rarity: 'mythic', price: 48, label: 'Mítica', emoji: '🧘', meta: '+370 XP · Serenidad x6.3' },
-    { name: 'Fruta Amor', rarity: 'mythic', price: 49, label: 'Mítica', emoji: '💖', meta: '+390 XP · Encanto x6.5' },
-    { name: 'Fruta Creation', rarity: 'mythic', price: 52, label: 'Mítica', emoji: '🪄', meta: '+415 XP · Creación x6.8' },
-    { name: 'Fruta Araña', rarity: 'legendary', price: 34, label: 'Legendaria', emoji: '🕷️', meta: '+245 XP · Telaraña x4.7' },
-    { name: 'Fruta Sonido', rarity: 'legendary', price: 32, label: 'Legendaria', emoji: '🎵', meta: '+230 XP · Resonancia x4.4' },
-    { name: 'Fruta Fénix', rarity: 'mythic', price: 55, label: 'Mítica', emoji: '🦜', meta: '+430 XP · Renacer x7.0' },
-    { name: 'Fruta Portal', rarity: 'mythic', price: 58, label: 'Mítica', emoji: '🌀', meta: '+450 XP · Teletransporte x7.3' },
-    { name: 'Fruta Lightning', rarity: 'mythic', price: 60, label: 'Mítica', emoji: '⚡', meta: '+470 XP · Relámpago x7.6' },
-    { name: 'Fruta Dolor', rarity: 'epic', price: 26, label: 'Épica', emoji: '💀', meta: '+180 XP · Sufrimiento x3.7' },
-    { name: 'Fruta Nevada', rarity: 'epic', price: 28, label: 'Épica', emoji: '❄️', meta: '+190 XP · Nieve x4.0' },
-    { name: 'Fruta Gravedad', rarity: 'legendary', price: 37, label: 'Legendaria', emoji: '🪐', meta: '+270 XP · Atracción x5.1' },
-    { name: 'Fruta T-Rex', rarity: 'legendary', price: 39, label: 'Legendaria', emoji: '🦖', meta: '+300 XP · Fuerza x5.4' },
-    { name: 'Fruta Mammut', rarity: 'legendary', price: 41, label: 'Legendaria', emoji: '🦣', meta: '+315 XP · Invulnerabilidad x5.7' },
-    { name: 'Fruta Masa', rarity: 'epic', price: 24, label: 'Épica', emoji: '⚙️', meta: '+165 XP · Peso x3.5' },
-    { name: 'Fruta Sombra', rarity: 'epic', price: 27, label: 'Épica', emoji: '🌘', meta: '+188 XP · Noche x3.9' },
-    { name: 'Fruta Veneno', rarity: 'mythic', price: 46, label: 'Mítica', emoji: '☠️', meta: '+360 XP · Toxicidad x6.1' },
-    { name: 'Fruta Gas', rarity: 'rare', price: 17, label: 'Rara', emoji: '💨', meta: '+100 XP · Viento x2.2' },
-    { name: 'Fruta Espíritu', rarity: 'legendary', price: 44, label: 'Legendaria', emoji: '🕊️', meta: '+340 XP · Espíritu x6.0' },
-    { name: 'Fruta Tiger', rarity: 'legendary', price: 35, label: 'Legendaria', emoji: '🐯', meta: '+255 XP · Instinto x4.9' },
-    { name: 'Fruta Yeti', rarity: 'epic', price: 30, label: 'Épica', emoji: '🧊', meta: '+210 XP · Escarcha x4.1' },
-    { name: 'Fruta Magnet', rarity: 'legendary', price: 40, label: 'Legendaria', emoji: '🧲', meta: '+310 XP · Magnetismo x5.6' },
-    { name: 'Fruta Kitsune', rarity: 'mythic', price: 53, label: 'Mítica', emoji: '🦊', meta: '+420 XP · Ilusión x6.9' },
-    { name: 'Fruta Control', rarity: 'mythic', price: 57, label: 'Mítica', emoji: '🧠', meta: '+445 XP · Dominio x7.2' },
-    { name: 'Fruta Dragón', rarity: 'mythic', price: 64, label: 'Mítica', emoji: '🐉', meta: '+520 XP · Poder x8.0' }
+    { name: 'Rocket', rarity: 'rare', price: 12, label: 'Rara', emoji: '🚀', meta: '+70 XP · Velocidad x1.8' },
+    { name: 'Gira', rarity: 'rare', price: 13, label: 'Rara', emoji: '🦒', meta: '+80 XP · Agilidad x2.0' },
+    { name: 'Blade', rarity: 'rare', price: 15, label: 'Rara', emoji: '🗡️', meta: '+90 XP · Daño x2.2' },
+    { name: 'Resorte', rarity: 'rare', price: 17, label: 'Rara', emoji: '🪢', meta: '+100 XP · Salto x2.4' },
+    { name: 'Bomba', rarity: 'epic', price: 20, label: 'Épica', emoji: '💣', meta: '+120 XP · Explosión x2.8' },
+    { name: 'Humo', rarity: 'epic', price: 22, label: 'Épica', emoji: '💨', meta: '+130 XP · Sigilo x3.0' },
+    { name: 'Pico', rarity: 'epic', price: 24, label: 'Épica', emoji: '⛏️', meta: '+140 XP · Fuerza x3.2' },
+    { name: 'Fuego', rarity: 'epic', price: 26, label: 'Épica', emoji: '🔥', meta: '+155 XP · Furia x3.4' },
+    { name: 'Hielo', rarity: 'epic', price: 28, label: 'Épica', emoji: '❄️', meta: '+170 XP · Frío x3.6' },
+    { name: 'Arena', rarity: 'legendary', price: 32, label: 'Legendaria', emoji: '🏜️', meta: '+200 XP · Defensa x4.0' },
+    { name: 'Oscuridad', rarity: 'legendary', price: 34, label: 'Legendaria', emoji: '🌑', meta: '+210 XP · Sombras x4.2' },
+    { name: 'Eagle', rarity: 'legendary', price: 36, label: 'Legendaria', emoji: '🦅', meta: '+225 XP · Visión x4.4' },
+    { name: 'Diamante', rarity: 'legendary', price: 38, label: 'Legendaria', emoji: '💎', meta: '+240 XP · Durabilidad x4.6' },
+    { name: 'Luz', rarity: 'legendary', price: 40, label: 'Legendaria', emoji: '✨', meta: '+250 XP · Brillo x4.8' },
+    { name: 'Caucho', rarity: 'mythic', price: 45, label: 'Mítica', emoji: '🛞', meta: '+290 XP · Elasticidad x5.2' },
+    { name: 'Fantasma', rarity: 'mythic', price: 48, label: 'Mítica', emoji: '👻', meta: '+310 XP · Etérea x5.5' },
+    { name: 'Magma', rarity: 'mythic', price: 52, label: 'Mítica', emoji: '🌋', meta: '+340 XP · Ardor x5.8' },
+    { name: 'Temblor', rarity: 'mythic', price: 55, label: 'Mítica', emoji: '🌍', meta: '+360 XP · Terremoto x6.2' },
+    { name: 'Buddha', rarity: 'mythic', price: 58, label: 'Mítica', emoji: '🧘', meta: '+380 XP · Serenidad x6.5' },
+    { name: 'Amor', rarity: 'mythic', price: 60, label: 'Mítica', emoji: '💖', meta: '+400 XP · Encanto x6.8' },
+    { name: 'Creation', rarity: 'mythic', price: 62, label: 'Mítica', emoji: '🪄', meta: '+420 XP · Creación x7.0' },
+    { name: 'Araña', rarity: 'legendary', price: 37, label: 'Legendaria', emoji: '🕷️', meta: '+230 XP · Telaraña x4.5' },
+    { name: 'Sonido', rarity: 'legendary', price: 35, label: 'Legendaria', emoji: '🎵', meta: '+220 XP · Resonancia x4.3' },
+    { name: 'Fénix', rarity: 'mythic', price: 65, label: 'Mítica', emoji: '🦜', meta: '+440 XP · Renacer x7.3' },
+    { name: 'Portal', rarity: 'mythic', price: 68, label: 'Mítica', emoji: '🌀', meta: '+460 XP · Teletransporte x7.6' },
+    { name: 'Lightning', rarity: 'mythic', price: 70, label: 'Mítica', emoji: '⚡', meta: '+480 XP · Relámpago x7.9' },
+    { name: 'Dolor', rarity: 'epic', price: 29, label: 'Épica', emoji: '💀', meta: '+180 XP · Sufrimiento x3.7' },
+    { name: 'Nevada', rarity: 'epic', price: 30, label: 'Épica', emoji: '🌨️', meta: '+190 XP · Nieve x3.9' },
+    { name: 'Gravedad', rarity: 'legendary', price: 42, label: 'Legendaria', emoji: '🪐', meta: '+260 XP · Atracción x5.0' },
+    { name: 'T-Rex', rarity: 'legendary', price: 44, label: 'Legendaria', emoji: '🦖', meta: '+280 XP · Fuerza x5.2' },
+    { name: 'Mammut', rarity: 'legendary', price: 46, label: 'Legendaria', emoji: '🦣', meta: '+295 XP · Invulnerabilidad x5.5' },
+    { name: 'Masa', rarity: 'epic', price: 31, label: 'Épica', emoji: '⚙️', meta: '+200 XP · Peso x4.0' },
+    { name: 'Sombra', rarity: 'epic', price: 33, label: 'Épica', emoji: '🌘', meta: '+210 XP · Noche x4.1' },
+    { name: 'Veneno', rarity: 'mythic', price: 54, label: 'Mítica', emoji: '☠️', meta: '+350 XP · Toxicidad x6.0' },
+    { name: 'Gas', rarity: 'rare', price: 18, label: 'Rara', emoji: '💨', meta: '+105 XP · Viento x2.5' },
+    { name: 'Espíritu', rarity: 'legendary', price: 50, label: 'Legendaria', emoji: '🕊️', meta: '+330 XP · Espíritu x5.9' },
+    { name: 'Tiger', rarity: 'legendary', price: 43, label: 'Legendaria', emoji: '🐯', meta: '+270 XP · Instinto x5.1' },
+    { name: 'Yeti', rarity: 'epic', price: 27, label: 'Épica', emoji: '🧊', meta: '+165 XP · Escarcha x3.5' },
+    { name: 'Magnet', rarity: 'legendary', price: 41, label: 'Legendaria', emoji: '🧲', meta: '+255 XP · Magnetismo x4.9' },
+    { name: 'Kitsune', rarity: 'mythic', price: 63, label: 'Mítica', emoji: '🦊', meta: '+430 XP · Ilusión x7.0' },
+    { name: 'Control', rarity: 'mythic', price: 66, label: 'Mítica', emoji: '🧠', meta: '+450 XP · Dominio x7.4' },
+    { name: 'Dragón', rarity: 'mythic', price: 75, label: 'Mítica', emoji: '🐉', meta: '+520 XP · Poder x8.0' }
   ];
 
   const fruitGrid = document.querySelector('.fruit-grid');
   if (fruitGrid) {
+    fruitGrid.innerHTML = '';
+
     fruitCatalog.forEach((fruit) => {
       const card = document.createElement('article');
       card.className = `fruit-card reveal ${fruit.rarity}`;
@@ -150,162 +152,3 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(element);
   });
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-												
