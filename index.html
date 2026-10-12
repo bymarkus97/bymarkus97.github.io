@@ -3,235 +3,285 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blox Fruits | Frutas legendarias</title>
-    <meta
-      name="description"
-      content="Colección premium de frutas estilo Blox Fruits con precios, raridades y fotos reales."
-    />
+    <title>Blox Fruits Store | Tienda Oficial</title>
+    <meta name="description" content="Tienda oficial de Blox Fruits. Compra frutas legendarias, raras y míticas. Paga con PayPal." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Orbitron:wght@500;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Orbitron:wght@700;900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="page-shell">
-      <header class="topbar">
-        <div class="container nav">
-          <div class="brand" aria-label="Blox Fruits logo">
+    <div class="bg-glow glow-1"></div>
+    <div class="bg-glow glow-2"></div>
+    <div class="bg-glow glow-3"></div>
+
+    <header class="topbar">
+      <div class="container nav">
+        <div class="brand">
+          <span class="brand-mark">🍉</span>
+          <span class="brand-name">BLOX FRUITS</span>
+          <span class="brand-subtitle">TIENDA OFICIAL</span>
+        </div>
+
+        <nav class="nav-links">
+          <a href="#inicio">Inicio</a>
+          <a href="#tienda">Tienda</a>
+          <a href="#about">Sobre el Juego</a>
+        </nav>
+
+        <div class="nav-right">
+          <button class="nav-button">Jugar ahora</button>
+          <div class="cart-icon-wrapper">
+            <div class="cart-icon">🛒</div>
+            <div class="cart-badge">0</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="inicio">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow">COMPRA FRUTAS LEGENDARIAS</span>
+            <h1>Domina el mar con poder frutal.</h1>
+            <p>
+              Accede a las frutas más poderosas del juego Blox Fruits. Frutas Logia, 
+              Paramecia y Zoan con habilidades épicas. Compra seguro con PayPal y 
+              comienza tu aventura como el mejor pirata.
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#tienda">Ver tienda</a>
+              <a class="btn btn-secondary" href="#about">Conocer más</a>
+            </div>
+
+            <div class="hero-stats">
+              <div>
+                <strong>150+</strong>
+                <span>Frutas</span>
+              </div>
+              <div>
+                <strong>5</strong>
+                <span>Raridades</span>
+              </div>
+              <div>
+                <strong>3</strong>
+                <span>Tipos</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="orb orb-one">🍇</div>
+            <div class="orb orb-two">🍊</div>
+            <div class="orb orb-three">🍓</div>
+            <div class="orb orb-four">⚡</div>
+
+            <div class="hero-card mythic-card">
+              <div class="card-shine"></div>
+              <div class="card-top">
+                <span>MYTHICAL FRUIT</span>
+                <span class="live">🔴 LIVE</span>
+              </div>
+              <div class="hero-fruit-display">
+                <span class="hero-fruit-emoji">⚫</span>
+              </div>
+              <h3>Yami Yami no Mi</h3>
+              <p class="fruit-type">Logia • Poder: Oscuridad</p>
+              <div class="progress-row">
+                <span>Demanda</span>
+                <strong>99%</strong>
+              </div>
+              <div class="bar"><span style="width: 99%"></span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="feature-strip">
+        <div class="container feature-grid">
+          <article class="mini-feature">
+            <div class="icon">⚔️</div>
+            <div>
+              <h4>Frutas Logia</h4>
+              <p>Elementos supremos: fuego, hielo, rayo y más.</p>
+            </div>
+          </article>
+          <article class="mini-feature">
+            <div class="icon">🔮</div>
+            <div>
+              <h4>Frutas Paramecia</h4>
+              <p>Poderes únicos y transformaciones brutales.</p>
+            </div>
+          </article>
+          <article class="mini-feature">
+            <div class="icon">🦁</div>
+            <div>
+              <h4>Frutas Zoan</h4>
+              <p>Transforma en bestias legendarias y míticas.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section store-section" id="tienda">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">CATÁLOGO COMPLETO</span>
+            <h2>Elige tu fruta legendaria</h2>
+            <p>Todas las frutas del juego Blox Fruits disponibles para comprar</p>
+          </div>
+
+          <div class="shop-tools">
+            <div class="search-box">
+              <input type="text" id="searchInput" placeholder="🔍 Buscar fruta por nombre..." />
+            </div>
+            <div class="filter-bar">
+              <button class="filter-btn active" data-filter="all">Todas</button>
+              <button class="filter-btn" data-filter="logia">Logia</button>
+              <button class="filter-btn" data-filter="paramecia">Paramecia</button>
+              <button class="filter-btn" data-filter="zoan">Zoan</button>
+              <div class="filter-divider"></div>
+              <button class="filter-btn" data-filter="mythical">Míticas</button>
+              <button class="filter-btn" data-filter="legendary">Legendarias</button>
+            </div>
+          </div>
+
+          <div id="fruitGrid" class="fruit-grid"></div>
+        </div>
+      </section>
+
+      <section class="section about-section" id="about">
+        <div class="container about-grid">
+          <div class="about-copy">
+            <span class="eyebrow">SOBRE BLOX FRUITS</span>
+            <h2>El mejor juego de aventura y poder.</h2>
+            <p>
+              Blox Fruits es un increíble juego multijugador donde explorar islas, 
+              completar misiones, entrenar poderes frutal y batirte contra otros jugadores 
+              en épicas batallas PvP.
+            </p>
+            <ul>
+              <li>✅ Explora 10+ islas con secretos ocultos</li>
+              <li>✅ Domina frutas con poderes únicos</li>
+              <li>✅ Compite en PvP competitivo</li>
+              <li>✅ Sube de nivel y mejora tus habilidades</li>
+              <li>✅ Eventos exclusivos cada temporada</li>
+            </ul>
+          </div>
+
+          <div class="about-panel">
+            <div class="panel-header">
+              <span>Información del Juego</span>
+              <span class="chip">ACTIVO</span>
+            </div>
+            <div class="panel-body">
+              <div class="panel-stat">
+                <label>Jugadores en línea</label>
+                <strong>50K+</strong>
+              </div>
+              <div class="panel-stat">
+                <label>Eventos activos</label>
+                <strong>12</strong>
+              </div>
+              <div class="panel-stat">
+                <label>Temporada actual</label>
+                <strong>Season 12</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="brand footer-brand">
             <span class="brand-mark">🍉</span>
             <span class="brand-name">BLOX FRUITS</span>
           </div>
-
-          <nav class="nav-links" aria-label="Navegación principal">
-            <a href="#inicio">Inicio</a>
-            <a href="#frutas">Frutas</a>
-            <a href="#raras">Raras</a>
-            <a href="#tienda">Tienda</a>
-          </nav>
-
-          <button class="nav-button">Jugar ahora</button>
-        </div>
-      </header>
-
-      <main>
-        <section class="hero" id="inicio">
-          <div class="container hero-grid">
-            <div class="hero-copy">
-              <span class="eyebrow">FRUIT POWER</span>
-              <h1>Domina el mundo con las mejores frutas.</h1>
-              <p>
-                Explora frutas legendarias, elige tu estilo de combate y conviértete
-                en el mejor pirata del mar. Colecciona poder, sube de nivel y conquista
-                cada isla con fuerza y estrategia.
-              </p>
-
-              <div class="hero-actions">
-                <a class="btn btn-primary" href="#frutas">Ver frutas</a>
-                <a class="btn btn-secondary" href="#tienda">Tienda</a>
-              </div>
-
-              <div class="hero-stats">
-                <div>
-                  <strong>1.2M+</strong>
-                  <span>Jugadores</span>
-                </div>
-                <div>
-                  <strong>24/7</strong>
-                  <span>Eventos</span>
-                </div>
-                <div>
-                  <strong>150+</strong>
-                  <span>Frutas</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="hero-visual" aria-label="Imagen destacada de fruta legendaria">
-              <div class="orb orb-one">🍍</div>
-              <div class="orb orb-two">🍇</div>
-              <div class="orb orb-three">🍊</div>
-              <div class="orb orb-four">🍓</div>
-
-              <div class="hero-card">
-                <div class="card-top">
-                  <span>Legendary Drop</span>
-                  <span class="live">LIVE</span>
-                </div>
-                <img
-                  src="https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=900&q=80"
-                  alt="Fruta legendaria"
-                />
-                <h3>Mera Mera no Mi</h3>
-                <div class="progress-row">
-                  <span>Poder</span>
-                  <strong>96%</strong>
-                </div>
-                <div class="bar"><span></span></div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="feature-strip" id="raras">
-          <div class="container feature-grid">
-            <article class="mini-feature">
-              <div class="icon">⚔️</div>
-              <div>
-                <h4>Poder de combate</h4>
-                <p>Mejora tus habilidades con frutas raras y técnicas brutalmente potentes.</p>
-              </div>
-            </article>
-            <article class="mini-feature">
-              <div class="icon">🌊</div>
-              <div>
-                <h4>Islas legendarias</h4>
-                <p>Explora nuevos territorios, tesoros y eventos exclusivos de temporada.</p>
-              </div>
-            </article>
-            <article class="mini-feature">
-              <div class="icon">💰</div>
-              <div>
-                <h4>Precios premium</h4>
-                <p>Compra frutas con enormes beneficios y alcanza el máximo poder.</p>
-              </div>
-            </article>
-          </div>
-        </section>
-
-        <section class="section fruits-section" id="frutas">
-          <div class="container">
-            <div class="section-heading">
-              <span class="eyebrow">FRUTAS LEGENDARIAS</span>
-              <h2>Descubre tus nuevas habilidades</h2>
-            </div>
-
-            <div class="shop-tools">
-              <div class="search-box">
-                <input type="text" id="searchInput" placeholder="Buscar fruta..." />
-              </div>
-              <div class="filter-bar" aria-label="Filtros de frutas">
-                <button class="filter-btn active" data-filter="all">Todas</button>
-                <button class="filter-btn" data-filter="logia">Logia</button>
-                <button class="filter-btn" data-filter="paramecia">Paramecia</button>
-                <button class="filter-btn" data-filter="zoan">Zoan</button>
-                <button class="filter-btn" data-filter="mythical">Mítica</button>
-              </div>
-            </div>
-
-            <div id="fruitGrid" class="fruit-grid" aria-live="polite"></div>
-          </div>
-        </section>
-
-        <section class="section info-section" id="tienda">
-          <div class="container info-grid">
-            <div class="info-copy">
-              <span class="eyebrow">MODO DE JUEGO</span>
-              <h2>Un mundo pensado para dominar cada pelea.</h2>
-              <p>
-                Participa en combates intensos, mejora tus habilidades y desbloquea
-                nuevas habilidades especiales. Cada fruta te da un estilo único, una
-                estrategia diferente y un enorme potencial para llegar a la cima.
-              </p>
-              <ul>
-                <li>🥇 PvP competitivo</li>
-                <li>🤝 Misiones cooperativas</li>
-                <li>🧩 Eventos temporales</li>
-                <li>🛡️ Mejora de personaje</li>
-              </ul>
-            </div>
-
-            <div class="info-panel">
-              <div class="panel-header">
-                <span>Season 12</span>
-                <span class="chip">Premium</span>
-              </div>
-              <div class="panel-body">
-                <div class="panel-stat">
-                  <label>Progreso</label>
-                  <strong>88%</strong>
-                </div>
-                <div class="meter"><span></span></div>
-                <div class="reward-box">
-                  <span>Recompensa</span>
-                  <strong>Fruit Crystal x12</strong>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <footer class="footer">
-        <div class="container footer-grid">
-          <div>
-            <div class="brand footer-brand">
-              <span class="brand-mark">🍉</span>
-              <span class="brand-name">BLOX FRUITS</span>
-            </div>
-            <p>El futuro del poder frutal está aquí.</p>
-          </div>
-
-          <div>
-            <h4>Explora</h4>
-            <ul>
-              <li><a href="#inicio">Inicio</a></li>
-              <li><a href="#frutas">Frutas</a></li>
-              <li><a href="#raras">Raras</a></li>
-            </ul>
-          </div>
-
-          <div>
-            <h4>Comunidad</h4>
-            <ul>
-              <li><a href="#">Discord</a></li>
-              <li><a href="#">YouTube</a></li>
-              <li><a href="#">Twitter</a></li>
-            </ul>
-          </div>
+          <p>La tienda oficial de frutas legendarias.</p>
         </div>
 
-        <div class="container footer-bottom">
-          <span>© 2026 Blox Fruits Fan Page</span>
+        <div>
+          <h4>Tienda</h4>
+          <ul>
+            <li><a href="#tienda">Ver todas las frutas</a></li>
+            <li><a href="#tienda">Frutas nuevas</a></li>
+            <li><a href="#tienda">Ofertas</a></li>
+          </ul>
         </div>
-      </footer>
+
+        <div>
+          <h4>Comunidad</h4>
+          <ul>
+            <li><a href="#">Discord</a></li>
+            <li><a href="#">YouTube</a></li>
+            <li><a href="#">Twitter</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <span>© 2026 Blox Fruits Store • Pago seguro con PayPal</span>
+      </div>
+    </footer>
+
+    <!-- CARRITO LATERAL -->
+    <div class="cart-sidebar">
+      <div class="cart-header">
+        <h2>🛒 Tu Carrito</h2>
+        <button class="cart-close">×</button>
+      </div>
+
+      <div class="cart-items">
+        <div class="cart-empty">El carrito está vacío</div>
+      </div>
+
+      <div class="cart-footer">
+        <div class="cart-total">
+          Total: <strong>$0</strong>
+        </div>
+        <button class="btn-checkout" disabled>Pagar con PayPal</button>
+        <p class="cart-help">Se abrirá PayPal para completar el pago de forma segura.</p>
+      </div>
     </div>
 
-    <div id="fruitModal" class="modal" aria-hidden="true">
+    <!-- MODAL DE DETALLES -->
+    <div id="fruitModal" class="modal">
       <div class="modal-content">
-        <button class="modal-close" aria-label="Cerrar modal">×</button>
-        <img id="modalImage" src="" alt="Fruta" />
+        <button class="modal-close">×</button>
+        <div class="modal-image-container">
+          <img id="modalImage" src="" alt="Fruta" class="modal-image" />
+          <span id="modalRarity" class="modal-rarity-badge"></span>
+        </div>
         <div class="modal-body">
-          <span id="modalRarity" class="modal-rarity"></span>
           <h2 id="modalName"></h2>
-          <p id="modalType"></p>
-          <p id="modalPrice"></p>
-          <p id="modalDescription"></p>
+          <div class="modal-type-info">
+            <span id="modalType" class="modal-type"></span>
+            <span id="modalElement" class="modal-element"></span>
+          </div>
+          <p id="modalDescription" class="modal-description"></p>
+          <div class="modal-abilities">
+            <h4>Habilidades:</h4>
+            <ul id="modalAbilities"></ul>
+          </div>
+          <div class="modal-price-section">
+            <div class="modal-price">
+              Precio: <strong id="modalPrice"></strong>
+            </div>
+            <button class="btn btn-buy" id="modalBuyBtn">Agregar al carrito</button>
+          </div>
         </div>
       </div>
     </div>
+
+    <div class="page-overlay"></div>
 
     <script src="script.js"></script>
   </body>
