@@ -17,6 +17,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  const cartToggle = document.querySelector('.cart-toggle');
+  const cartSidebar = document.querySelector('.cart-sidebar');
+  const cartClose = document.querySelector('.cart-close');
+  const cartItems = document.querySelector('.cart-items');
+  const cartCount = document.querySelector('.cart-count');
+  const summaryTotal = document.querySelector('.summary-total');
+
   const fruitCatalog = [
     { name: 'Rocket', rarity: 'rare', price: 12, label: 'Rara', emoji: '🚀', meta: '+70 XP · Velocidad x1.8' },
     { name: 'Gira', rarity: 'rare', price: 13, label: 'Rara', emoji: '🦒', meta: '+80 XP · Agilidad x2.0' },
@@ -62,6 +69,38 @@ document.addEventListener('DOMContentLoaded', () => {
     { name: 'Dragón', rarity: 'mythic', price: 75, label: 'Mítica', emoji: '🐉', meta: '+520 XP · Poder x8.0' }
   ];
 
+  let cart = [];
+
+  const renderCart = () => {
+    if (!cartItems) return;
+
+    if (cart.length === 0) {
+      cartItems.innerHTML = '<p class="cart-empty">Todavía no has añadido frutas.</p>';
+      if (cartCount) cartCount.textContent = '0';
+      if (summaryTotal) summaryTotal.textContent = '€0';
+      return;
+    }
+
+    cartItems.innerHTML = cart
+      .map(
+        (item, index) => `
+          <div class="cart-item">
+            <div class="cart-item-info">
+              <h4>${item.name}</h4>
+              <p>${item.rarity || 'Fruta'}</p>
+            </div>
+            <div class="cart-item-price">€${item.price}</div>
+            <button class="cart-item-remove" type="button" data-index="${index}" aria-label="Eliminar ${item.name}">×</button>
+          </div>
+        `
+      )
+      .join('');
+
+    const total = cart.reduce((sum, item) => sum + item.price, 0);
+    if (cartCount) cartCount.textContent = cart.length;
+    if (summaryTotal) summaryTotal.textContent = `€${total}`;
+  };
+
   const fruitGrid = document.querySelector('.fruit-grid');
   if (fruitGrid) {
     fruitGrid.innerHTML = '';
@@ -79,47 +118,52 @@ document.addEventListener('DOMContentLoaded', () => {
         <p class="fruit-meta">${fruit.meta}</p>
         <div class="fruit-bottom">
           <strong class="price">€${fruit.price}</strong>
-          <button class="buy-btn add-to-cart" type="button" data-name="${fruit.name}" data-price="${fruit.price}">Comprar</button>
+          <button class="buy-btn add-to-cart" type="button" data-name="${fruit.name}" data-price="${fruit.price}" data-rarity="${fruit.rarity}">Comprar</button>
         </div>
       `;
       fruitGrid.appendChild(card);
     });
   }
 
+  document.addEventListener('click', (event) => {
+    const addButton = event.target.closest('.add-to-cart');
+    if (addButton) {
+      const name = addButton.dataset.name;
+      const price = Number(addButton.dataset.price || 0);
+      const rarity = addButton.dataset.rarity || 'rare';
+      cart.push({ name, price, rarity });
+      renderCart();
+
+      addButton.textContent = '✓ Añadido';
+      addButton.disabled = true;
+      addButton.style.opacity = '0.8';
+
+      setTimeout(() => {
+        addButton.textContent = 'Comprar';
+        addButton.disabled = false;
+        addButton.style.opacity = '1';
+      }, 800);
+      return;
+    }
+
+    const removeButton = event.target.closest('.cart-item-remove');
+    if (removeButton) {
+      const index = Number(removeButton.dataset.index || 0);
+      cart.splice(index, 1);
+      renderCart();
+    }
+
+    if (event.target.closest('.cart-toggle')) {
+      cartSidebar?.classList.add('active');
+    }
+
+    if (event.target.closest('.cart-close')) {
+      cartSidebar?.classList.remove('active');
+    }
+  });
+
   const filterButtons = document.querySelectorAll('.filter-btn');
   const fruitCards = document.querySelectorAll('.fruit-card');
-
-  const cartCount = document.querySelector('.cart-count');
-  const summaryTotal = document.querySelector('.summary-total');
-  let cart = [];
-
-  const updateCart = () => {
-    if (cartCount) cartCount.textContent = cart.length;
-    if (summaryTotal) {
-      const total = cart.reduce((sum, item) => sum + item.price, 0);
-      summaryTotal.textContent = `€${total}`;
-    }
-  };
-
-  document.addEventListener('click', (event) => {
-    const button = event.target.closest('.add-to-cart');
-    if (!button) return;
-
-    const price = Number(button.dataset.price || 0);
-    const name = button.dataset.name || 'Fruit';
-    cart.push({ name, price });
-    updateCart();
-
-    button.textContent = '✓ Añadido';
-    button.disabled = true;
-    button.style.opacity = '0.8';
-
-    setTimeout(() => {
-      button.textContent = 'Comprar';
-      button.disabled = false;
-      button.style.opacity = '1';
-    }, 800);
-  });
 
   filterButtons.forEach((button) => {
     button.addEventListener('click', () => {
@@ -147,4 +191,6 @@ document.addEventListener('DOMContentLoaded', () => {
     element.style.transform = 'translateY(18px)';
     observer.observe(element);
   });
+
+  renderCart();
 });

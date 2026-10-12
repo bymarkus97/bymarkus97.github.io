@@ -136,15 +136,33 @@
               <button class="filter-btn" type="button" data-filter="legendary">Legendarias</button>
               <button class="filter-btn" type="button" data-filter="mythic">Míticas</button>
             </div>
-            <div class="cart-pill">
+            <button class="cart-toggle" type="button" aria-label="Abrir carrito">
               <span>Carrito</span>
               <strong class="cart-count">0</strong>
-            </div>
+            </button>
           </div>
 
           <div class="fruit-grid"></div>
         </div>
       </section>
+
+      <aside class="cart-sidebar" aria-label="Carrito de compra">
+        <div class="cart-header">
+          <h2>Tu carrito</h2>
+          <button class="cart-close" type="button" aria-label="Cerrar carrito">×</button>
+        </div>
+        <div class="cart-items">
+          <p class="cart-empty">Todavía no has añadido frutas.</p>
+        </div>
+        <div class="cart-footer">
+          <div class="cart-total">
+            <span>Total</span>
+            <strong class="summary-total">€0</strong>
+          </div>
+          <button class="btn-checkout" type="button">Finalizar compra</button>
+          <div class="cart-help">Compra todas las que quieras</div>
+        </div>
+      </aside>
 
       <section class="section dark-panel" id="raras">
         <div class="container battle-grid">
