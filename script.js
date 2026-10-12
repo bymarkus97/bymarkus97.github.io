@@ -1,35 +1,34 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Data de frutas con precios
   const fruitsData = [
     {
       id: 1,
+      name: 'Gomu Gomu no Mi',
+      emoji: '🥤',
+      type: 'paramecia',
+      rarity: 'common',
+      price: 12,
+      description: 'Poder del caucho. Tu cuerpo se vuelve flexible y resistente.',
+      image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=900&q=80'
+    },
+    {
+      id: 2,
       name: 'Mera Mera no Mi',
       emoji: '🔥',
       type: 'logia',
       rarity: 'legendary',
-      price: 1500,
-      description: 'Poder del fuego. Domina el fuego y quema todo a tu paso.',
-      image: 'https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=500&q=60'
-    },
-    {
-      id: 2,
-      name: 'Gura Gura no Mi',
-      emoji: '🌊',
-      type: 'paramecia',
-      rarity: 'mythic',
-      price: 2500,
-      description: 'Poder del terremoto. Causa terremotos devastadores.',
-      image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?auto=format&fit=crop&w=500&q=60'
+      price: 30,
+      description: 'Poder del fuego. Controla llamas de devastación total.',
+      image: 'https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=900&q=80'
     },
     {
       id: 3,
       name: 'Yami Yami no Mi',
-      emoji: '⚫',
+      emoji: '🌑',
       type: 'logia',
       rarity: 'mythic',
-      price: 3000,
-      description: 'Poder de la oscuridad. Absorbe todo a tu alrededor.',
-      image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=500&q=60'
+      price: 50,
+      description: 'Poder de la oscuridad. Absorbe la luz y domina la sombra.',
+      image: 'https://images.unsplash.com/photo-1511560013544-7f68a0f4d0d5?auto=format&fit=crop&w=900&q=80'
     },
     {
       id: 4,
@@ -37,9 +36,9 @@ document.addEventListener('DOMContentLoaded', () => {
       emoji: '❄️',
       type: 'logia',
       rarity: 'legendary',
-      price: 1800,
-      description: 'Poder del hielo. Congela todo lo que toca.',
-      image: 'https://images.unsplash.com/photo-1511379938547-c1f69b13d835?auto=format&fit=crop&w=500&q=60'
+      price: 24,
+      description: 'Poder del hielo. Congela enemigos y territorio con precisión.',
+      image: 'https://images.unsplash.com/photo-1517292987719-0369a794ec0f?auto=format&fit=crop&w=900&q=80'
     },
     {
       id: 5,
@@ -47,86 +46,124 @@ document.addEventListener('DOMContentLoaded', () => {
       emoji: '⚡',
       type: 'logia',
       rarity: 'legendary',
-      price: 2000,
-      description: 'Poder del rayo. Viaja a la velocidad de la luz.',
-      image: 'https://images.unsplash.com/photo-1599599810694-b308ca884cb8?auto=format&fit=crop&w=500&q=60'
+      price: 28,
+      description: 'Poder del rayo. Genera luz, electricidad y velocidad extrema.',
+      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80'
     },
     {
       id: 6,
-      name: 'Ope Ope no Mi',
-      emoji: '🔪',
-      type: 'paramecia',
-      rarity: 'epic',
-      price: 1200,
-      description: 'Poder de la cirugía. Controla todo dentro de tu campo.',
-      image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=500&q=60'
-    },
-    {
-      id: 7,
-      name: 'Marco Marco no Mi',
-      emoji: '🦅',
-      type: 'zoan',
-      rarity: 'legendary',
-      price: 1600,
-      description: 'Poder del fénix. Transforma en un fénix inmortal.',
-      image: 'https://images.unsplash.com/photo-1614613535308-eb5fbd8b4fcd?auto=format&fit=crop&w=500&q=60'
-    },
-    {
-      id: 8,
-      name: 'Tori Tori no Mi',
-      emoji: '🦜',
-      type: 'zoan',
-      rarity: 'uncommon',
-      price: 500,
-      description: 'Poder del pájaro. Vuela y ataca desde el aire.',
-      image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?auto=format&fit=crop&w=500&q=60'
-    },
-    {
-      id: 9,
-      name: 'Inu Inu no Mi',
-      emoji: '🐕',
-      type: 'zoan',
-      rarity: 'uncommon',
-      price: 400,
-      description: 'Poder del perro. Transforma en un perro feroz.',
-      image: 'https://images.unsplash.com/photo-1614613535308-eb5fbd8b4fcd?auto=format&fit=crop&w=500&q=60'
-    },
-    {
-      id: 10,
-      name: 'Noro Noro no Mi',
-      emoji: '🐌',
-      type: 'paramecia',
-      rarity: 'rare',
-      price: 900,
-      description: 'Poder de la lentitud. Ralentiza todo a tu alrededor.',
-      image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=500&q=60'
-    },
-    {
-      id: 11,
-      name: 'Gomu Gomu no Mi',
-      emoji: '⭕',
-      type: 'paramecia',
-      rarity: 'rare',
-      price: 800,
-      description: 'Poder del caucho. Tu cuerpo se vuelve flexible.',
-      image: 'https://images.unsplash.com/photo-1599599810694-b308ca884cb8?auto=format&fit=crop&w=500&q=60'
-    },
-    {
-      id: 12,
       name: 'Suna Suna no Mi',
       emoji: '🏜️',
       type: 'logia',
       rarity: 'legendary',
-      price: 1700,
-      description: 'Poder de la arena. Controla la arena desértica.',
-      image: 'https://images.unsplash.com/photo-1614613535308-eb5fbd8b4fcd?auto=format&fit=crop&w=500&q=60'
+      price: 21,
+      description: 'Poder de la arena. Moldea arena, tormentas y destrucción.',
+      image: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80'
+    },
+    {
+      id: 7,
+      name: 'Gura Gura no Mi',
+      emoji: '🌊',
+      type: 'paramecia',
+      rarity: 'mythic',
+      price: 35,
+      description: 'Poder del terremoto. Crea ondas de destrucción devastadoras.',
+      image: 'https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=900&q=80'
+    },
+    {
+      id: 8,
+      name: 'Ope Ope no Mi',
+      emoji: '🔪',
+      type: 'paramecia',
+      rarity: 'epic',
+      price: 18,
+      description: 'Poder del espacio. Crea campos y manipula el entorno.',
+      image: 'https://images.unsplash.com/photo-1593344484964-5d112b1e965e?auto=format&fit=crop&w=900&q=80'
+    },
+    {
+      id: 9,
+      name: 'Kilo Kilo no Mi',
+      emoji: '⚖️',
+      type: 'paramecia',
+      rarity: 'rare',
+      price: 15,
+      description: 'Poder del peso. Ajusta la masa a tu favor.',
+      image: 'https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=900&q=80'
+    },
+    {
+      id: 10,
+      name: 'Tori Tori no Mi',
+      emoji: '🦜',
+      type: 'zoan',
+      rarity: 'uncommon',
+      price: 8,
+      description: 'Poder del ave. Cambia de forma y gana movilidad aérea.',
+      image: 'https://images.unsplash.com/photo-1520637836862-4d197d17c90a?auto=format&fit=crop&w=900&q=80'
+    },
+    {
+      id: 11,
+      name: 'Inu Inu no Mi',
+      emoji: '🐕',
+      type: 'zoan',
+      rarity: 'rare',
+      price: 9,
+      description: 'Poder del perro. Gran fuerza física y velocidad feroz.',
+      image: 'https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?auto=format&fit=crop&w=900&q=80'
+    },
+    {
+      id: 12,
+      name: 'Noro Noro no Mi',
+      emoji: '🐌',
+      type: 'paramecia',
+      rarity: 'rare',
+      price: 11,
+      description: 'Poder de la lentitud. Ralentiza cualquier cosa que toques.',
+      image: 'https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=900&q=80'
+    },
+    {
+      id: 13,
+      name: 'Magu Magu no Mi',
+      emoji: '🔥',
+      type: 'logia',
+      rarity: 'legendary',
+      price: 26,
+      description: 'Poder del magma. Controlas calor intenso y fuego rojo vivo.',
+      image: 'https://images.unsplash.com/photo-1529528744093-6d1b1b3a4f6b?auto=format&fit=crop&w=900&q=80'
+    },
+    {
+      id: 14,
+      name: 'Bomu Bomu no Mi',
+      emoji: '💣',
+      type: 'paramecia',
+      rarity: 'epic',
+      price: 14,
+      description: 'Poder de la explosión. Genera ráfagas y daño masivo.',
+      image: 'https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=900&q=80'
+    },
+    {
+      id: 15,
+      name: 'Hito Hito no Mi',
+      emoji: '🧍',
+      type: 'zoan',
+      rarity: 'legendary',
+      price: 20,
+      description: 'Poder humano. Transformación corporal y fuerza avanzada.',
+      image: 'https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=900&q=80'
+    },
+    {
+      id: 16,
+      name: 'Suke Suke no Mi',
+      emoji: '🧥',
+      type: 'paramecia',
+      rarity: 'epic',
+      price: 17,
+      description: 'Poder invisible. Te vuelve intocable para muchos ataques.',
+      image: 'https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=900&q=80'
     }
   ];
 
-  // Carrito
   let cart = JSON.parse(localStorage.getItem('bloxCart')) || [];
 
-  // Elementos del DOM
   const searchInput = document.getElementById('searchInput');
   const filterButtons = document.querySelectorAll('.filter-btn');
   const fruitGrid = document.getElementById('fruitGrid');
@@ -140,7 +177,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalClose = document.querySelector('.modal-close');
   const navButton = document.querySelector('.nav-button');
 
-  // Función para renderizar frutas
   function renderFruits(fruits) {
     fruitGrid.innerHTML = fruits.map(fruit => `
       <div class="fruit-card ${fruit.rarity}">
@@ -148,13 +184,12 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="fruit-icon">${fruit.emoji}</div>
         <h3>${fruit.name}</h3>
         <p>${fruit.description}</p>
-        <div class="price">$${fruit.price.toLocaleString()}</div>
+        <div class="price">€${fruit.price}</div>
         <button class="btn btn-buy" onclick="addToCart(${fruit.id})">Agregar al carrito</button>
       </div>
     `).join('');
   }
 
-  // Función para filtrar frutas
   function filterFruits() {
     const searchTerm = searchInput.value.toLowerCase();
     const activeFilter = document.querySelector('.filter-btn.active').dataset.filter;
@@ -169,7 +204,6 @@ document.addEventListener('DOMContentLoaded', () => {
     renderFruits(filtered);
   }
 
-  // Agregar al carrito
   window.addToCart = function(fruitId) {
     const fruit = fruitsData.find(f => f.id === fruitId);
     const existingItem = cart.find(item => item.id === fruitId);
@@ -182,16 +216,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     localStorage.setItem('bloxCart', JSON.stringify(cart));
     updateCart();
-    showNotification('Agregado al carrito');
+    showNotification('Fruta añadida al carrito');
   };
 
-  // Actualizar carrito
   function updateCart() {
     const badgeCount = cart.reduce((sum, item) => sum + item.quantity, 0);
     document.querySelector('.cart-badge').textContent = badgeCount;
 
     const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-    
+
     if (cart.length === 0) {
       cartItems.innerHTML = '<div class="cart-empty">El carrito está vacío</div>';
       checkoutBtn.disabled = true;
@@ -202,24 +235,22 @@ document.addEventListener('DOMContentLoaded', () => {
             <h4>${item.name}</h4>
             <p>Cantidad: ${item.quantity}</p>
           </div>
-          <div class="cart-item-price">$${(item.price * item.quantity).toLocaleString()}</div>
+          <div class="cart-item-price">€${(item.price * item.quantity)}</div>
           <button class="cart-item-remove" onclick="removeFromCart(${item.id})">×</button>
         </div>
       `).join('');
       checkoutBtn.disabled = false;
     }
 
-    cartTotal.textContent = `$${total.toLocaleString()}`;
+    cartTotal.textContent = `€${total}`;
   }
 
-  // Eliminar del carrito
   window.removeFromCart = function(fruitId) {
     cart = cart.filter(item => item.id !== fruitId);
     localStorage.setItem('bloxCart', JSON.stringify(cart));
     updateCart();
   };
 
-  // Abrir/cerrar carrito
   cartIcon.addEventListener('click', () => {
     cartSidebar.classList.add('active');
   });
@@ -228,16 +259,11 @@ document.addEventListener('DOMContentLoaded', () => {
     cartSidebar.classList.remove('active');
   });
 
-  // Checkout con PayPal
   checkoutBtn.addEventListener('click', () => {
     const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-    const items = cart.map(item => `${item.name} (x${item.quantity})`).join(', ');
-    
-    // Redirigir a PayPal.me con la cantidad
     const paypalUrl = `https://www.paypal.me/itrionmods/${total}`;
     window.open(paypalUrl, '_blank');
-    
-    // Limpiar carrito después de ir a PayPal
+
     setTimeout(() => {
       cart = [];
       localStorage.setItem('bloxCart', JSON.stringify(cart));
@@ -246,10 +272,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 500);
   });
 
-  // Búsqueda
   searchInput.addEventListener('input', filterFruits);
 
-  // Filtros
   filterButtons.forEach(btn => {
     btn.addEventListener('click', () => {
       filterButtons.forEach(b => b.classList.remove('active'));
@@ -258,17 +282,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Modal de detalles
   window.showFruitDetails = function(fruitId) {
     const fruit = fruitsData.find(f => f.id === fruitId);
     if (fruit) {
       document.getElementById('modalImage').src = fruit.image;
       document.getElementById('modalName').textContent = fruit.name;
       document.getElementById('modalType').textContent = `Tipo: ${fruit.type.toUpperCase()}`;
-      document.getElementById('modalPrice').textContent = `Precio: $${fruit.price.toLocaleString()}`;
+      document.getElementById('modalPrice').textContent = `Precio: €${fruit.price}`;
       document.getElementById('modalDescription').textContent = fruit.description;
       document.getElementById('modalRarity').textContent = fruit.rarity;
-      document.getElementById('modalRarity').className = `modal-rarity ${fruit.rarity}`;
+      document.getElementById('modalRarity').className = `modal-rarity-badge ${fruit.rarity}`;
       modal.classList.add('active');
     }
   };
@@ -283,33 +306,31 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Notificación
   function showNotification(message) {
     const notification = document.createElement('div');
     notification.style.cssText = `
       position: fixed;
       top: 20px;
       right: 20px;
-      background: linear-gradient(135deg, #7ef29a, #4fd1a6);
-      color: white;
+      background: linear-gradient(135deg, #00d4ff, #0088ff);
+      color: #0a0f1f;
       padding: 16px 24px;
-      border-radius: 8px;
-      font-weight: 700;
+      border-radius: 12px;
+      font-weight: 800;
       z-index: 300;
       animation: slideIn 0.3s ease;
     `;
     notification.textContent = message;
     document.body.appendChild(notification);
-    
+
     setTimeout(() => {
       notification.style.animation = 'slideOut 0.3s ease';
       setTimeout(() => notification.remove(), 300);
     }, 2000);
   }
 
-  // Smooth scroll
   navButton.addEventListener('click', () => {
-    document.getElementById('frutas')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('tienda')?.scrollIntoView({ behavior: 'smooth' });
   });
 
   const links = document.querySelectorAll('a[href^="#"]');
@@ -323,8 +344,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Animaciones de entrada
-  const cards = document.querySelectorAll('.fruit-card, .mini-feature, .info-panel');
+  const cards = document.querySelectorAll('.fruit-card, .mini-feature, .about-panel');
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -344,33 +364,19 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(card);
   });
 
-  // Inicializar
-  renderFruits(fruitsData);
-  updateCart();
-
-  // Agregar estilos para animaciones
   const style = document.createElement('style');
   style.textContent = `
     @keyframes slideIn {
-      from {
-        transform: translateX(400px);
-        opacity: 0;
-      }
-      to {
-        transform: translateX(0);
-        opacity: 1;
-      }
+      from { transform: translateX(400px); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
     }
     @keyframes slideOut {
-      from {
-        transform: translateX(0);
-        opacity: 1;
-      }
-      to {
-        transform: translateX(400px);
-        opacity: 0;
-      }
+      from { transform: translateX(0); opacity: 1; }
+      to { transform: translateX(400px); opacity: 0; }
     }
   `;
   document.head.appendChild(style);
+
+  renderFruits(fruitsData);
+  updateCart();
 });
